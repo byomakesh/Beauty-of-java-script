@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import logo from './logo.svg';
+import Home from './Home';
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -14,6 +16,7 @@ class Login extends Component {
         this.updateStateInput = this.updateStateInput.bind(this);
      };
      updateState() {
+        this.props.history.push('/home');
         this.setState({data: 'Data updated...'})
      }
      updateStateInput(e) {
